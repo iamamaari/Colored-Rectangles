@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+body{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50vh 50vh;
+}
+
+.card{
+    transition: all 1s ease;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.2s ease;    
+
+}
+
+.card:hover{
+    transform: scale(0.98);
+    transition: all 0.2s ease;    
+}
+
+#card1{
+    background-color: #F6D7A7;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#card2{
+    background-color: #F6EABE;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#card3{
+    background-color: #C8E3D4;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#card4{
+    background-color: #87AAAA;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.mCard{
+    height: 200px;
+    width: 200px;
+    border-radius: 7px;
+    background-color: white;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+}
+
