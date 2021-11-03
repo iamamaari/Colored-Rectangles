@@ -7,54 +7,107 @@
 }
 
 body{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50vh 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card{
-    transition: all 1s ease;
-    height: 100%;
+    height: max(50vh, 250px);
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    transition: all 0.2s ease;    
+    flex-wrap: wrap;
 
 }
 
 .card:hover{
-    transform: scale(0.98);
-    transition: all 0.2s ease;    
+        transform: scaleX(0.95) scaleY(0.90);
+        transition: all 0.2s ease;
 }
 
 #card1{
     background-color: #F6D7A7;
-    grid-column: 1/2;
-    grid-row: 1/2;
+
 }
 #card2{
     background-color: #F6EABE;
-    grid-column: 2/3;
-    grid-row: 1/2;
+
 }
 #card3{
     background-color: #C8E3D4;
-    grid-column: 1/2;
-    grid-row: 2/3;
+
 }
 #card4{
     background-color: #87AAAA;
-    grid-column: 2/3;
-    grid-row: 2/3;
+
 }
 
 .mCard{
-    height: 200px;
-    width: 200px;
+    width: max(23vh, 25vw);
+    height: max(23vh, 25vw);
     border-radius: 7px;
     background-color: white;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.05);
 }
 
+@media (min-width: 600px){
+
+}
+
+@media (min-width: 1000px){
+    body{
+        background-color: white;
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 50vh 50vh;
+    
+    }
+    .card{
+        transition: all 1s ease;
+        height: 50vh;
+        width: 50vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        transition: all 0.2s ease;    
+    
+    }
+    
+    .card:hover{
+        transform: scaleX(0.95) scaleY(0.90);
+        transition: all 0.2s ease;    
+    }
+    
+    #card1{
+        background-color: #F6D7A7;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #card2{
+        background-color: #F6EABE;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #card3{
+        background-color: #C8E3D4;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #card4{
+        background-color: #87AAAA;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    
+    .mCard{
+        width: min(23vh, 25vw);
+        height: min(23vh, 25vw);
+        border-radius: 7px;
+        background-color: white;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+    }
+}
